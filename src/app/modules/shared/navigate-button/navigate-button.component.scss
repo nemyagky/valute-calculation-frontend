@@ -1,0 +1,19 @@
+@import "../../../../assets/mixins/mixins";
+
+.navigate-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #000000;
+  cursor: pointer;
+
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+
+  span {
+    @include calibri-text();
+  }
+}

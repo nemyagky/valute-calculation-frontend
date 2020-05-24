@@ -1,0 +1,11 @@
+<div class="basket-total">
+    <div class="basket-total__calculate">
+        <button (click)="calculateResult()">Посчитать</button>
+    </div>
+    <div class="basket-total__result" *ngIf="(basketResult$ | async).RUB || (basketResult$ | async).RUB >= 0">
+        <span>Итоговая сумма:</span>
+        <span>{{ (basketResult$ | async).RUB }} RUB</span>
+        <span>{{ (basketResult$ | async).EUR }} EUR</span>
+        <span>{{ (basketResult$ | async).USD }} USD</span>
+    </div>
+</div>

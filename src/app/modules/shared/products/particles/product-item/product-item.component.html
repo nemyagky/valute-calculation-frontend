@@ -1,0 +1,28 @@
+<div class="product-item">
+    <span class="product-item__name">{{product.name}}</span>
+    <div class="product-item__actions-wrapper">
+        <div class="quantity">
+            <span class="quantity__span">Количество</span>
+            <div class="quantity__toggler">
+                <input type="button"
+                       class="toggler__button"
+                       value="-"
+                       *ngIf="!disabled"
+                       (click)="updateQuantity(-1)">
+                <span class="quantity__count">{{product.quantity}}</span>
+                <input type="button"
+                       class="toggler__button"
+                       value="+"
+                       *ngIf="!disabled"
+                       (click)="updateQuantity(1)">
+            </div>
+        </div>
+        <div class="price">
+            <span class="price__price-span">{{product.price}}</span>
+            <span class="price__currency">{{product.currency}}</span>
+        </div>
+    </div>
+    <div class="product-item__add-button">
+        <button *ngIf="!disabled" (click)="addProductToCurrency()">Добавить в корзину</button>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+@import "../../../../../assets/mixins/mixins";
+
+
+.basket-total {
+  width: 250px;
+  height: 100px;
+  display: flex;
+  position: fixed;
+  border: 2px solid #000000;
+  left: calc(100vw / 2 - 250px / 2);
+  bottom: 15px;
+  background: #ffffff;
+
+  &__calculate {
+
+    button {
+      @include calibri-text();
+      margin: 15px;
+    }
+  }
+
+  &__result {
+    display: flex;
+    flex-direction: column;
+
+    @include calibri-text();
+  }
+}

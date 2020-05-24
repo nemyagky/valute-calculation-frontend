@@ -1,0 +1,11 @@
+@import "../../../../../../assets/mixins/mixins";
+
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.empty-products {
+  @include calibri-text();
+}
